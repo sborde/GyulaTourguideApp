@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/main_menu_item_height"
+    android:layout_margin="@dimen/layout_margin_size"
+    android:background="@drawable/category_list_item_background">
+
+    <ImageView
+        style="@style/MainCategoryItemImage"
+        android:id="@+id/menu_icon"
+        android:src="@drawable/ic_useful"/>
+
+    <TextView
+        style="@style/MainCategoryItemLabel"
+        android:id="@+id/menu_label"
+        android:text="Sights"/>
+
+</RelativeLayout>
