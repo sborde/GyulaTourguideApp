@@ -1,8 +1,6 @@
-package listadapters;
+package hu.borde.gyulatourguide.adapter;
 
-import android.app.Activity;
 import android.content.Context;
-import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -13,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import hu.borde.gyulatourguide.R;
-import listitems.MainCategory;
+import hu.borde.gyulatourguide.model.MainCategory;
 
 /**
  * Created by borde on 2017.06.13..

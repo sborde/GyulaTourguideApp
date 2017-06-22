@@ -1,4 +1,4 @@
-package listadapters;
+package hu.borde.gyulatourguide.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -12,12 +12,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import hu.borde.gyulatourguide.R;
-import listitems.Event;
-import listitems.Hotel;
-
-/**
- * Created by borde on 2017.06.13..
- */
+import hu.borde.gyulatourguide.model.Hotel;
 
 public class HotelListAdapter extends ArrayAdapter<Hotel> {
 

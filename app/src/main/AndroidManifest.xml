@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainMenuActivity">
+        <activity android:name=".activity.MainMenuActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,30 +17,36 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".EventActivity"
+            android:name=".activity.EventActivity"
             android:label="Events, festivals"
-            android:parentActivityName=".MainMenuActivity">
+            android:parentActivityName=".activity.MainMenuActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainMenuActivity" />
+                android:value=".activity.MainMenuActivity" />
         </activity>
-        <activity android:name=".UsefulPlacesActivity" />
         <activity
-            android:name=".AccomodationActivity"
+            android:name=".activity.AccomodationActivity"
             android:label="Accomodations"
-            android:parentActivityName=".MainMenuActivity">
+            android:parentActivityName=".activity.MainMenuActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainMenuActivity" />
+                android:value=".activity.MainMenuActivity" />
         </activity>
         <activity
-            android:name=".SightsActivity"
-            android:label="Sights"
-            android:parentActivityName=".MainMenuActivity">
-
+            android:name=".activity.RestaurantActivity"
+            android:label="Restaurants"
+            android:parentActivityName=".activity.MainMenuActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainMenuActivity" />
+                android:value=".activity.MainMenuActivity" />
+        </activity>
+        <activity
+            android:name=".activity.SightsActivity"
+            android:label="Sights"
+            android:parentActivityName=".activity.MainMenuActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainMenuActivity" />
         </activity>
     </application>
 

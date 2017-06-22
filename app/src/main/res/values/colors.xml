@@ -4,4 +4,5 @@
     <color name="colorPrimaryDark">#988c00</color>
     <color name="colorAccent">#FF4081</color>
     <color name="activityBackground">#e4e1c7</color>
+    <color name="tab_text_color">@color/activityBackground</color>
 </resources>

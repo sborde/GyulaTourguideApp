@@ -1,4 +1,4 @@
-package hu.borde.gyulatourguide;
+package hu.borde.gyulatourguide.activity;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -11,10 +11,9 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
-import listadapters.EventListAdapter;
-import listadapters.HotelListAdapter;
-import listitems.Event;
-import listitems.Hotel;
+import hu.borde.gyulatourguide.R;
+import hu.borde.gyulatourguide.adapter.HotelListAdapter;
+import hu.borde.gyulatourguide.model.Hotel;
 
 public class AccomodationActivity extends AppCompatActivity {
 
@@ -25,13 +24,13 @@ public class AccomodationActivity extends AppCompatActivity {
 
         final List<Hotel> hotelList = new ArrayList<>();
 
-        hotelList.add(new Hotel("Wellness Hotel Gyula", 4, "5700, Gyula, Part str. 5."));
-        hotelList.add(new Hotel("Elizabeth Hotel", 4, "5700, Gyula, Vár str. 1."));
-        hotelList.add(new Hotel("Park Hotel Gyula", 3, "5700, Gyula, Part str. 15."));
-        hotelList.add(new Hotel("Hunguest Hotel Erkel", 3, "5700, Gyula, Várkert str. 1"));
-        hotelList.add(new Hotel("Komló Hotel", 4, "5700, Gyula, Béke blvd. 8."));
-        hotelList.add(new Hotel("Corvin Hotel Gyula", 3, "5700, Gyula, Jókai str. 9-11."));
-        hotelList.add(new Hotel("D-Hotel", 3, "5700, Gyula, Dózsa Gy. str. 4-6."));
+        hotelList.add(new Hotel(getString(R.string.hotel_weln), 4, getString(R.string.hotel_weln_add)));
+        hotelList.add(new Hotel(getString(R.string.hotel_eliz), 4, getString(R.string.hotel_eliz_add)));
+        hotelList.add(new Hotel(getString(R.string.hotel_park), 3, getString(R.string.hotel_park_add)));
+        hotelList.add(new Hotel(getString(R.string.hotel_erkel), 3, getString(R.string.hotel_erkel_add)));
+        hotelList.add(new Hotel(getString(R.string.hotel_komlo), 4, getString(R.string.hotel_komlo_add)));
+        hotelList.add(new Hotel(getString(R.string.hotel_corvin), 3, getString(R.string.hotel_corvin_add)));
+        hotelList.add(new Hotel(getString(R.string.hotel_d), 3, getString(R.string.hotel_d_add)));
 
         ListView listView = (ListView) findViewById(R.id.hotels_listview);
 

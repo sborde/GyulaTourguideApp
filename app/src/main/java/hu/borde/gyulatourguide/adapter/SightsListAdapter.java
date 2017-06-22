@@ -1,7 +1,6 @@
-package hu.borde.gyulatourguide;
+package hu.borde.gyulatourguide.adapter;
 
 import android.content.Context;
-import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -13,14 +12,14 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import listadapters.HotelListAdapter;
-import listitems.Sight;
+import hu.borde.gyulatourguide.R;
+import hu.borde.gyulatourguide.model.Sight;
 
 /**
  * Created by borde on 2017.06.16..
  */
 
-class SightsListAdapter extends ArrayAdapter<Sight> {
+public class SightsListAdapter extends ArrayAdapter<Sight> {
 
     public SightsListAdapter(@NonNull Context context, @NonNull List<Sight> sights) {
         super(context, 0, sights);
@@ -37,16 +36,11 @@ class SightsListAdapter extends ArrayAdapter<Sight> {
         }
 
         Sight currentSight = getItem(position);
+        SightViewHolder holder = new SightViewHolder(listItem);
 
-        ((TextView)listItem.findViewById(R.id.item_title)).setText(currentSight.getmSightName());
-
-        TextView descriptionTextView = (TextView)listItem.findViewById(R.id.item_descript);
-        ImageView sightImage = (ImageView)listItem.findViewById(R.id.item_image);
-
-        descriptionTextView.setText(currentSight.getmSightDescription());
-        descriptionTextView.setMaxLines(Integer.MAX_VALUE);
-
-        sightImage.setImageResource(currentSight.getmSightImageResourceID());
+        holder.setName(currentSight.getmSightName());
+        holder.setDescription(currentSight.getmSightDescription());
+        holder.setImage(currentSight.getmSightImageResourceID());
 
         listItem.findViewById(R.id.on_map_icon).setVisibility(View.GONE);
 
